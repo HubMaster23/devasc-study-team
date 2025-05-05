@@ -11,9 +11,6 @@ CREATE TABLE categorias(idcategoria INT PRIMARY KEY, nombre VARCHAR(50) NOT NULL
 CREATE TABLE productos(idproducto INT PRIMARY KEY,nombre VARCHAR(100) NOT NULL, descripcion TEXT, precio DECIMAL(10,2) NOT NULL, idcategoria INT,
 CONSTRAINT asigna FOREIGN KEY (idcategoria) REFERENCES categorias(idcategoria));
 
-CREATE TABLE inventario(idinventario INT PRIMARY KEY, idproducto INT, cantidad INT NOT NULL, fechaact TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-CONSTRAINT establecen FOREIGN KEY (idproducto) REFERENCES productos(idproducto));
-
 CREATE TABLE ventas(idventa INT AUTO_INCREMENT PRIMARY KEY, idcliente INT, idempleado INT, fechaventa DATETIME DEFAULT CURRENT_TIMESTAMP, total DECIMAL(10,2) NOT NULL,
 CONSTRAINT concede FOREIGN KEY (idcliente) REFERENCES clientes(idcliente),
 CONSTRAINT coloca FOREIGN KEY (idempleado) REFERENCES empleados(idempleado));
