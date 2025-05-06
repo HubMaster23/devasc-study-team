@@ -19,5 +19,5 @@ CREATE TABLE detalleventas(iddetalle INT AUTO_INCREMENT PRIMARY KEY, idventa INT
 CONSTRAINT corresponde FOREIGN KEY (idventa) REFERENCES ventas(idventa),
 CONSTRAINT disigna FOREIGN KEY (idproducto) REFERENCES productos(idproducto));
 
-CREATE TABLE facturas(idfactura INT PRIMARY KEY,idventa INT, fechaemision DATETIME DEFAULT CURRENT_TIMESTAMP, total DECIMAL(10,2) NOT NULL,
+CREATE TABLE facturas(idfactura INT PRIMARY KEY AUTO_INCREMENT,idventa INT, fechaemision DATETIME DEFAULT CURRENT_TIMESTAMP, total DECIMAL(10,2) NOT NULL,
 CONSTRAINT fija FOREIGN KEY (idventa) REFERENCES ventas(idventa));
