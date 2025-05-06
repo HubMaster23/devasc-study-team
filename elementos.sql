@@ -1,83 +1,48 @@
 INSERT INTO clientes (nombre) VALUES
+('Andrea Martínez'),
+('Carlos Gómez'),
+('Lucía Torres'),
 ('Juan Pérez'),
-('Ana Gómez'),
-('Carlos Díaz'),
-('María Rodríguez'),
-('Pedro Martínez'),
-('Laura Fernández'),
-('José López'),
-('Marta Sánchez'),
-('Luis García'),
-('Isabel Torres');
+('Martha López');
 
 INSERT INTO empleados (nombre, cargo, salario) VALUES
-('Carlos Ruiz', 'Vendedor', 1500.00),
-('Sofía Méndez', 'Supervisor', 2500.00),
-('Gabriel Fernández', 'Gerente', 4000.00),
-('Lucía Díaz', 'Vendedor', 1400.00),
-('Ricardo Martínez', 'Recepcionista', 1200.00),
-('Ana Pérez', 'Cajero', 1300.00),
-('Oscar Gómez', 'Vendedor', 1600.00),
-('Pedro Sánchez', 'Supervisor', 2200.00),
-('Elena Torres', 'Cajero', 1100.00),
-('David Herrera', 'Gerente', 3500.00);
+('Sandra Ruiz', 'Vendedora', 8500.00),
+('Luis Herrera', 'Cajero', 7800.00),
+('Pedro Sánchez', 'Gerente', 12000.00),
+('Ana Morales', 'Vendedora', 8200.00),
+('José Ramírez', 'Encargado', 9500.00);
 
 INSERT INTO categorias (idcategoria, nombre) VALUES
-(1, 'Electrónica'),
-(2, 'Ropa'),
-(3, 'Muebles'),
-(4, 'Juguetes'),
-(5, 'Alimentos'),
-(6, 'Hogar'),
-(7, 'Libros'),
-(8, 'Deportes'),
-(9, 'Belleza'),
-(10, 'Automotriz');
+(1, 'Camisas'),
+(2, 'Pantalones'),
+(3, 'Sudaderas'),
+(4, 'Accesorios'),
+(5, 'Zapatos');
 
 INSERT INTO productos (idproducto, nombre, descripcion, precio, idcategoria) VALUES
-(1, 'Televisor', 'Televisor 40" LED', 350.00, 1),
-(2, 'Camiseta', 'Camiseta de algodón', 15.00, 2),
-(3, 'Sofa', 'Sofa de 3 plazas', 450.00, 3),
-(4, 'Muñeca', 'Muñeca de peluche', 25.00, 4),
-(5, 'Galletas', 'Galletas de chocolate', 3.50, 5),
-(6, 'Lámpara', 'Lámpara de escritorio', 30.00, 6),
-(7, 'Libro', 'Libro de fantasía', 12.00, 7),
-(8, 'Pelota', 'Pelota de fútbol', 10.00, 8),
-(9, 'Shampoo', 'Shampoo de 500ml', 7.50, 9),
-(10, 'Aceite motor', 'Aceite para motor 5L', 40.00, 10);
+(1, 'Camiseta Blanca', 'Camiseta de algodón unisex', 149.99, 1),
+(2, 'Jeans Azul', 'Jeans entallado azul oscuro', 399.00, 2),
+(3, 'Sudadera Negra', 'Sudadera con capucha oversize', 499.50, 3),
+(4, 'Gorra Roja', 'Gorra deportiva ajustable', 129.00, 4),
+(5, 'Tenis Deportivos', 'Zapatos deportivos para correr', 699.00, 5);
 
 INSERT INTO ventas (idcliente, idempleado, total) VALUES
-(1, 1, 700.00),
-(2, 2, 2500.00),
-(3, 3, 1500.00),
-(4, 4, 450.00),
-(5, 5, 100.00),
-(6, 6, 1000.00),
-(7, 7, 75.00),
-(8, 8, 30.00),
-(9, 9, 80.00),
-(10, 10, 500.00);
+(1, 1, 649.49),
+(2, 2, 129.00),
+(3, 3, 399.00),
+(4, 4, 499.50),
+(5, 5, 848.99);
 
 INSERT INTO detalleventas (idventa, idproducto, cantidad, subtotal) VALUES
-(1, 1, 2, 700.00),
-(2, 2, 1, 15.00),
-(3, 3, 1, 450.00),
-(4, 4, 1, 25.00),
-(5, 5, 2, 7.00),
-(6, 6, 1, 30.00),
-(7, 7, 1, 12.00),
-(8, 8, 3, 30.00),
-(9, 9, 1, 7.50),
-(10, 10, 2, 80.00);
+(1, 1, 1, 149.99),
+(1, 2, 1, 399.00),
+(1, 4, 1, 129.00),
+(2, 4, 1, 129.00),
+(3, 2, 1, 399.00);
 
 INSERT INTO facturas (idventa, total) VALUES
-(1, 700.00),
-(2, 2500.00),
-(3, 1500.00),
-(4, 450.00),
-(5, 100.00),
-(6, 1000.00),
-(7, 75.00),
-(8, 30.00),
-(9, 80.00),
-(10, 500.00);
+(1, 649.49),
+(2, 129.00),
+(3, 399.00),
+(4, 499.50),
+(5, 848.99);
